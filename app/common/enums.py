@@ -1,0 +1,37 @@
+from enum import Enum
+
+
+class TicketStatus(str, Enum):
+    OPEN = "OPEN"
+    IN_PROGRESS = "IN_PROGRESS"
+    RESOLVED = "RESOLVED"
+    CLOSED = "CLOSED"
+
+class TaskStatus(str, Enum):
+    PENDING = "PENDING"
+    IN_PROGRESS = "IN_PROGRESS"
+    COMPLETED = "COMPLETED"
+
+
+class TicketPriority(str, Enum):
+    LOW = "LOW"
+    MEDIUM = "MEDIUM"
+    HIGH = "HIGH"
+
+
+class TicketType(str, Enum):
+    SERVICE_REQUEST = "SERVICE_REQUEST"
+    BREAKDOWN = "BREAKDOWN"
+    INSTALLATION_ISSUE = "INSTALLATION_ISSUE"
+    AMC_VISIT = "AMC_VISIT"
+    INSPECTION = "INSPECTION"
+    SPARE_PARTS = "SPARE_PARTS"
+    GENERAL_COMPLAINT = "GENERAL_COMPLAINT"
+
+class LiftPhase(str, Enum):
+    CONSULTATION = "CONSULTATION"
+    SITE_VISIT = "SITE_VISIT"
+    MANUFACTURING = "MANUFACTURING"
+    INSTALLATION = "INSTALLATION"
+    TESTING = "TESTING"
+    HANDOVER = "HANDOVER"
