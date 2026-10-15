@@ -28,7 +28,7 @@ from app.modules.reports.routes import router as reports_router
 
 from app.modules.sales_visits.routes import router as sales_visits_router
 from app.modules.service_reports.routes import router as service_reports_router
-
+from app.modules.crm_leads.routes import router as crm_leads_router
 api_router = APIRouter()
 api_router.include_router(service_reports_router)
 api_router.include_router(auth_router)
@@ -58,3 +58,5 @@ api_router.include_router(lift_phases_router)
 api_router.include_router(reports_router)
 
 api_router.include_router(sales_visits_router)
+  
+api_router.include_router(crm_leads_router)

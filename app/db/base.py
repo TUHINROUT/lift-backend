@@ -6,5 +6,5 @@ class Base(DeclarativeBase):
     """
     pass
 
-# Import models below Base definition to register them for Alembic without circular import
-from app.modules.tracking.models import EmployeeLocation
+# Keep only external models without circular back-references
+from app.modules.tracking.models import EmployeeLocation  # noqa: F401
